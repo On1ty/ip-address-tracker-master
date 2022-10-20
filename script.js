@@ -8,6 +8,8 @@ const timeZoneElem = document.querySelector('[data-timezone]');
 const inputElem = document.querySelector('[data-input]');
 const submitElem = document.querySelector('[data-submit');
 
+const mapContainer = document.querySelector('[data-map-container');
+
 window.addEventListener('load', async (e) => {
     const ipObj = await getIp();
     const getLocObj = await getLoc(ipObj.ip);
@@ -73,13 +75,22 @@ const getLoc = async (ip) => {
 }
 
 const navMap = (lat, long) => {
-    var map = L.map('map').setView([lat, long], 50);
+    mapContainer.innerHTML = '<div id="map" style="width: 100%; height: 100%;"></div>';
+
+    var map = L.map('map', {
+        zoomControl: false,
+    }).setView([lat, long], 50);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([lat, long]).addTo(map)
-        .bindPopup('I am here!')
+    L.control.zoom({
+        position: 'bottomright'
+    }).addTo(map);
+
+    L.marker([lat, long])
+        .addTo(map)
+        .bindPopup('Your location')
         .openPopup();
 }

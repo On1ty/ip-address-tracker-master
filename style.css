@@ -156,7 +156,7 @@ body {
   text-transform: capitalize;
 }
 
-.map {
+.map__container {
     grid-row: 3 / 12;
     grid-column: 1 / 2;
 }

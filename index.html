@@ -13,45 +13,47 @@
 </head>
 
 <body>
-  <div class="ip-tracker">
-    <div class="header__bg"></div>
-    <div class="header">
-      <div class="header-title">
-        IP Address Tracker
-      </div>
-      <div class="header__input-group">
-        <input type="text" data-input class="header__input" placeholder="Search for any IP address or domain">
-        <div class="header__input-embed">
-          <button class="header__submit" data-submit>
-            <img src="images/icon-arrow.svg" alt="" class="header__icon">
-          </button>
+  <main>
+    <div class="ip-tracker">
+      <div class="header__bg"></div>
+      <div class="header">
+        <div class="header-title">
+          IP Address Tracker
+        </div>
+        <div class="header__input-group">
+          <input type="text" data-input class="header__input" placeholder="Search for any IP address or domain">
+          <div class="header__input-embed">
+            <button class="header__submit" data-submit>
+              <img src="images/icon-arrow.svg" alt="" class="header__icon">
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="result">
-      <div class="result__card">
-        <ul class="result__list">
-          <li class="result__item">
-            <span class="result__category">IP Address</span>
-            <span class="result__data" data-ip>Fetching</span>
-          </li>
-          <li class="result__item">
-            <span class="result__category">Location</span>
-            <span class="result__data" data-loc>Fetching</span>
-          </li>
-          <li class="result__item">
-            <span class="result__category">Timezone</span>
-            <span class="result__data" data-timezone>Fetching</span>
-          </li>
-          <li class="result__item">
-            <span class="result__category">ISP</span>
-            <span class="result__data result__data--caps" data-isp>Fetching</span>
-          </li>
-        </ul>
+      <div class="result">
+        <div class="result__card">
+          <ul class="result__list">
+            <li class="result__item">
+              <span class="result__category">IP Address</span>
+              <span class="result__data" data-ip>Fetching</span>
+            </li>
+            <li class="result__item">
+              <span class="result__category">Location</span>
+              <span class="result__data" data-loc>Fetching</span>
+            </li>
+            <li class="result__item">
+              <span class="result__category">Timezone</span>
+              <span class="result__data" data-timezone>Fetching</span>
+            </li>
+            <li class="result__item">
+              <span class="result__category">ISP</span>
+              <span class="result__data result__data--caps" data-isp>Fetching</span>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="map__container" data-map-container></div>
     </div>
-    <div id="map" class="map"></div>
-  </div>
+  </main>
   <script src="script.js"></script>
 </body>
 
