@@ -86,7 +86,7 @@ const navMap = (lat, long) => {
     }).addTo(map);
 
     L.control.zoom({
-        position: 'bottomright'
+        position: 'bottomleft'
     }).addTo(map);
 
     L.marker([lat, long])
